@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gavels Education Courses - Computer Basics, Online Forms, Digital Literacy, and Practical Computer Training for rural India.">
+    <title>हमारे Courses - GAVELS EDUCATION</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+        }
+
+        /* Header / Navbar */
+        .header {
+            background-color: #FFD700;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #000;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Course Details Section */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-detail {
+            background-color: #fff;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .course-detail h2 {
+            color: #000;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.5rem;
+        }
+
+        .course-detail h3 {
+            color: #000;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .course-detail p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .course-detail ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-detail li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Admission CTA */
+        .admission-cta {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .admission-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #FFD700;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-menu {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .course-detail {
+                padding: 1.5rem;
+            }
+
+            .course-detail h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GAVELS EDUCATION</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#admission">Admission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <h1>हमारे Courses</h1>
+        <p>ग्रामीण भारत के लिए व्यावहारिक और सस्ती डिजिटल शिक्षा</p>
+    </section>
+
+    <!-- Course Details -->
+    <section class="section">
+        <!-- Course 1: Computer Basics -->
+        <div class="course-detail">
+            <h2>1. कंप्यूटर बेसिक्स (Computer Basics)</h2>
+            <p>यह कोर्स उन लोगों के लिए है जो कंप्यूटर से पहली बार जुड़ रहे हैं। हम आपको कंप्यूटर की बुनियादी जानकारी से लेकर उसके उपयोग तक सब कुछ सिखाते हैं।</p>
+            
+            <h3>इस कोर्स में क्या सीखेंगे:</h3>
+            <ul>
+                <li>कंप्यूटर का परिचय और उसके भाग</li>
+                <li>Windows Operating System का उपयोग</li>
+                <li>MS Word - दस्तावेज़ बनाना और संपादित करना</li>
+                <li>MS Excel - स्प्रेडशीट और गणना</li>
+                <li>MS PowerPoint - प्रेजेंटेशन बनाना</li>
+                <li>इंटरनेट का उपयोग - ब्राउज़िंग, सर्चिंग, ईमेल</li>
+                <li>फाइल और फोल्डर का प्रबंधन</li>
+            </ul>
+
+            <h3>कौन ज्वाइन कर सकता है:</h3>
+            <p>कोई भी व्यक्ति जो कंप्यूटर सीखना चाहता है, चाहे उसकी उम्र कुछ भी हो। कोई पूर्व ज्ञान की आवश्यकता नहीं है।</p>
+
+            <h3>कोर्स की अवधि:</h3>
+            <p>2-3 महीने (प्रैक्टिकल क्लासेस के साथ)</p>
+        </div>
+
+        <!-- Course 2: Online Forms & Government Services -->
+        <div class="course-detail">
+            <h2>2. ऑनलाइन फॉर्म और सरकारी सेवाएं</h2>
+            <p>आजकल सभी सरकारी काम ऑनलाइन हो रहे हैं। इस कोर्स में हम आपको सिखाते हैं कि कैसे ऑनलाइन फॉर्म भरें, सरकारी वेबसाइटों का उपयोग करें, और डिजिटल सेवाओं का लाभ उठाएं।</p>
+            
+            <h3>इस कोर्स में क्या सीखेंगे:</h3>
+            <ul>
+                <li>सरकारी वेबसाइटों पर नेविगेशन</li>
+                <li>ऑनलाइन फॉर्म भरना (Aadhaar, PAN, राशन कार्ड, आदि)</li>
+                <li>डिजिटल लॉकर का उपयोग</li>
+                <li>ऑनलाइन आवेदन करना</li>
+                <li>सरकारी योजनाओं के लिए आवेदन</li>
+                <li>ऑनलाइन भुगतान करना</li>
+                <li>दस्तावेज़ अपलोड करना और डाउनलोड करना</li>
+            </ul>
+
+            <h3>कौन ज्वाइन कर सकता है:</h3>
+            <p>वे सभी लोग जो सरकारी कामों के लिए दफ्तरों के चक्कर काटने से बचना चाहते हैं और ऑनलाइन सेवाओं का उपयोग करना चाहते हैं।</p>
+
+            <h3>कोर्स की अवधि:</h3>
+            <p>1-2 महीने (प्रैक्टिकल ट्रेनिंग के साथ)</p>
+        </div>
+
+        <!-- Course 3: Digital Literacy -->
+        <div class="course-detail">
+            <h2>3. डिजिटल साक्षरता (Digital Literacy)</h2>
+            <p>डिजिटल दुनिया में सुरक्षित और स्मार्ट तरीके से काम करना सीखें। यह कोर्स आपको स्मार्टफोन, इंटरनेट, और डिजिटल उपकरणों का बेहतर उपयोग करना सिखाता है।</p>
+            
+            <h3>इस कोर्स में क्या सीखेंगे:</h3>
+            <ul>
+                <li>स्मार्टफोन का बेहतर उपयोग</li>
+                <li>WhatsApp, Facebook, और सोशल मीडिया का सुरक्षित उपयोग</li>
+                <li>ईमेल भेजना और प्राप्त करना</li>
+                <li>ऑनलाइन शॉपिंग और बैंकिंग</li>
+                <li>डिजिटल सुरक्षा - फ्रॉड से बचाव</li>
+                <li>ऑनलाइन जानकारी खोजना</li>
+                <li>वीडियो कॉल और ऑनलाइन मीटिंग</li>
+                <li>ऑनलाइन शिक्षा और सीखने के प्लेटफॉर्म</li>
+            </ul>
+
+            <h3>कौन ज्वाइन कर सकता है:</h3>
+            <p>सभी उम्र के लोग जो अपने स्मार्टफोन और इंटरनेट का बेहतर उपयोग करना चाहते हैं और डिजिटल दुनिया में सुरक्षित रहना चाहते हैं।</p>
+
+            <h3>कोर्स की अवधि:</h3>
+            <p>1-2 महीने</p>
+        </div>
+
+        <!-- Course 4: Practical Computer Training -->
+        <div class="course-detail">
+            <h2>4. व्यावहारिक कंप्यूटर प्रशिक्षण</h2>
+            <p>यह कोर्स रोजमर्रा के कामों पर फोकस करता है। हम आपको वो सब कुछ सिखाते हैं जो आपको दैनिक जीवन में काम आएगा।</p>
+            
+            <h3>इस कोर्स में क्या सीखेंगे:</h3>
+            <ul>
+                <li>टाइपिंग सीखना (हिंदी और अंग्रेजी)</li>
+                <li>रिज्यूमे और आवेदन पत्र बनाना</li>
+                <li>छोटे-मोटे व्यापार के लिए कंप्यूटर का उपयोग</li>
+                <li>फोटो और वीडियो का प्रबंधन</li>
+                <li>प्रिंटिंग और स्कैनिंग</li>
+                <li>ऑनलाइन फॉर्म भरना (व्यावहारिक उदाहरण)</li>
+                <li>कंप्यूटर की बुनियादी समस्याओं का समाधान</li>
+                <li>इंटरनेट से जानकारी निकालना और उपयोग करना</li>
+            </ul>
+
+            <h3>कौन ज्वाइन कर सकता है:</h3>
+            <p>वे लोग जो कंप्यूटर का उपयोग अपने रोजगार या व्यापार में करना चाहते हैं, या जो व्यावहारिक कौशल सीखना चाहते हैं।</p>
+
+            <h3>कोर्स की अवधि:</h3>
+            <p>2-3 महीने (हाथों-हाथ प्रैक्टिकल ट्रेनिंग)</p>
+        </div>
+    </section>
+
+    <!-- Admission CTA -->
+    <section class="admission-cta">
+        <h2>कोर्स में Admission लें</h2>
+        <p style="margin-bottom: 1.5rem;">किसी भी कोर्स में Admission के लिए WhatsApp पर संपर्क करें या ऑनलाइन फॉर्म भरें।</p>
+        <div class="cta-buttons">
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Course%20mein%20admission%20ke%20liye%20jaankari%20chahiye" class="btn btn-primary" target="_blank">WhatsApp पर Admission</a>
+            <!-- PLACEHOLDER: Replace with actual Google Form link -->
+            <a href="https://forms.google.com/your-form-link" class="btn btn-secondary" target="_blank">Online Admission Form</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Gavels.in - Digital Learning for Every Village</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">सभी अधिकार सुरक्षित</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual WhatsApp number -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20ke%20courses%20ke%20baare%20mein%20jaankari%20chahiye" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <span style="font-size: 2rem;">💬</span>
+    </a>
+</body>
+</html>
