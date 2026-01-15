@@ -6,10 +6,6 @@
     <meta name="description" content="Gavels Education - Digital Learning for Every Village. Affordable computer education, online forms training, and digital literacy for rural India. Panchayat-level education programs.">
     <meta name="keywords" content="rural education, digital literacy, computer training, village education, panchayat education, online forms, government services, India">
     <title>GAVELS EDUCATION - Digital Learning for Every Village</title>
-
-    <!-- FAVICON (browser tab logo) -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
     <style>
         * {
             margin: 0;
@@ -51,11 +47,11 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
         }
 
         .logo img {
             height: 32px;
+            margin-right: 10px;
         }
 
         .nav-menu {
@@ -221,11 +217,11 @@
             text-align: center;
         }
 
-        .video-grid {
+        .videos-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 900px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
             margin: 2rem auto 0;
         }
 
@@ -277,6 +273,10 @@
             padding: 3rem 2rem;
         }
 
+        .admission-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
         /* Footer */
         .footer {
             background-color: #000;
@@ -302,61 +302,189 @@
             text-decoration: none;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .videos-wrapper {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-
 <body>
-
-<!-- Header -->
-<header class="header">
-    <div class="nav-container">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Gavels Logo">
-            GAVELS EDUCATION
-        </a>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#admission">Admission</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-    <h1>GAVELS EDUCATION</h1>
-    <p class="tagline">Digital Learning for Every Village</p>
-    <p class="mission">हमारा मिशन है कि हर गाँव में डिजिटल शिक्षा पहुँचे।</p>
-    <div class="cta-buttons">
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">WhatsApp For Admission</a>
-        <a href="https://forms.google.com/your-form-link" class="btn btn-secondary">Online Admission Form</a>
-    </div>
-</section>
-
-<!-- Video Section -->
-<section class="section video-section">
-    <h2 class="section-title">हमारे वीडियो</h2>
-    <div class="video-grid">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gavels Education Logo">GAVELS EDUCATION</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#admission">Admission</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>GAVELS EDUCATION</h1>
+        <p class="tagline">Digital Learning for Every Village</p>
+        <p class="mission">हमारा मिशन है कि हर गाँव में डिजिटल शिक्षा पहुँचे। कंप्यूटर की बुनियादी जानकारी से लेकर ऑनलाइन फॉर्म भरने तक, हम आपको सिखाते हैं।</p>
+        <div class="cta-buttons">
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Admission%20ke%20liye%20jaankari%20chahiye" class="btn btn-primary" target="_blank">WhatsApp पर Admission</a>
+            <!-- PLACEHOLDER: Replace with actual Google Form link -->
+            <a href="https://forms.google.com/your-form-link" class="btn btn-secondary" target="_blank">Online Admission Form</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    © 2024 Gavels.in - Digital Learning for Every Village
-</footer>
+    <!-- About Section -->
+    <section class="section about">
+        <h2 class="section-title">हमारे बारे में</h2>
+        <div class="about-content">
+            <p>Gavels Education एक ऐसा शैक्षणिक संस्थान है जो ग्रामीण भारत में डिजिटल साक्षरता लाने के लिए समर्पित है। हम गाँवों और पंचायत स्तर पर काम करते हैं ताकि हर व्यक्ति को कंप्यूटर और इंटरनेट की जानकारी मिल सके।</p>
+            <br>
+            <p>हमारे पाठ्यक्रम में शामिल हैं: कंप्यूटर की बुनियादी जानकारी, ऑनलाइन फॉर्म भरना, सरकारी सेवाओं का उपयोग, और व्यावहारिक कंप्यूटर प्रशिक्षण। हमारा लक्ष्य है कि हर गाँव का व्यक्ति डिजिटल दुनिया से जुड़ सके।</p>
+        </div>
+    </section>
 
-<!-- WhatsApp Floating -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float">💬</a>
+    <!-- Course Highlights -->
+    <section class="section courses-preview">
+        <h2 class="section-title">हमारे Courses</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>कंप्यूटर बेसिक्स</h3>
+                <p>कंप्यूटर की बुनियादी जानकारी, Windows, MS Office, और इंटरनेट का उपयोग।</p>
+            </div>
+            <div class="course-card">
+                <h3>ऑनलाइन फॉर्म और सरकारी सेवाएं</h3>
+                <p>सरकारी वेबसाइटों पर फॉर्म भरना, ऑनलाइन आवेदन, और डिजिटल सेवाओं का उपयोग।</p>
+            </div>
+            <div class="course-card">
+                <h3>डिजिटल साक्षरता</h3>
+                <p>स्मार्टफोन का उपयोग, ईमेल, सोशल मीडिया, और ऑनलाइन सुरक्षा।</p>
+            </div>
+            <div class="course-card">
+                <h3>व्यावहारिक कंप्यूटर प्रशिक्षण</h3>
+                <p>हाथों-हाथ सीखना, प्रैक्टिकल क्लासेस, और रोजमर्रा के कामों के लिए कंप्यूटर का उपयोग।</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="courses.html" class="btn btn-primary">सभी Courses देखें</a>
+        </div>
+    </section>
 
+    <!-- Photo Gallery -->
+    <section class="section gallery">
+        <h2 class="section-title">हमारी गैलरी</h2>
+        <div class="gallery-grid">
+            <!-- PLACEHOLDER: Replace these divs with actual images -->
+            <!-- Example: <img src="images/gallery-1.jpg" alt="Classroom photo"> -->
+            <div class="gallery-item">Classroom Photo 1<br>(Add image here)</div>
+            <div class="gallery-item">Classroom Photo 2<br>(Add image here)</div>
+            <div class="gallery-item">Students Learning<br>(Add image here)</div>
+            <div class="gallery-item">Computer Lab<br>(Add image here)</div>
+            <div class="gallery-item">Village Session<br>(Add image here)</div>
+            <div class="gallery-item">Certificate Distribution<br>(Add image here)</div>
+        </div>
+    </section>
+
+    <!-- Demo Video -->
+    <section class="section video-section">
+        <h2 class="section-title">हमारा वीडियो</h2>
+        <div class="videos-wrapper">
+            <div class="video-container">
+                <!-- PLACEHOLDER: Replace VIDEO_ID_1 with actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <!-- PLACEHOLDER: Replace VIDEO_ID_2 with actual YouTube video ID -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Gavels / Trust Section -->
+    <section class="section trust">
+        <h2 class="section-title">क्यों Gavels Education?</h2>
+        <div class="trust-points">
+            <div class="trust-point">
+                <h3>सस्ती फीस</h3>
+                <p>ग्रामीण क्षेत्रों के लिए सस्ती और सुलभ फीस संरचना।</p>
+            </div>
+            <div class="trust-point">
+                <h3>गाँव-मित्र शिक्षण</h3>
+                <p>सरल भाषा में समझाना, हिंदी में निर्देश, और स्थानीय संदर्भ।</p>
+            </div>
+            <div class="trust-point">
+                <h3>व्यावहारिक सीख</h3>
+                <p>सिर्फ किताबी ज्ञान नहीं, बल्कि रोजमर्रा के कामों में उपयोगी सीख।</p>
+            </div>
+            <div class="trust-point">
+                <h3>पंचायत स्तर पर फोकस</h3>
+                <p>गाँव और पंचायत स्तर पर शिक्षा पहुँचाने का प्रयास।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission CTA -->
+    <section id="admission" class="admission-cta">
+        <h2>Admission लें - अभी शुरू करें!</h2>
+        <p style="margin-bottom: 1.5rem;">आज ही अपना डिजिटल सफर शुरू करें। WhatsApp पर संपर्क करें या ऑनलाइन फॉर्म भरें।</p>
+        <div class="cta-buttons">
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Admission%20ke%20liye%20jaankari%20chahiye" class="btn btn-primary" target="_blank">WhatsApp पर Admission</a>
+            <!-- PLACEHOLDER: Replace with actual Google Form link -->
+            <a href="https://forms.google.com/your-form-link" class="btn btn-secondary" target="_blank">Online Admission Form</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Gavels.in - Digital Learning for Every Village</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">सभी अधिकार सुरक्षित</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual WhatsApp number -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20ke%20baare%20mein%20jaankari%20chahiye" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <span style="font-size: 2rem;">💬</span>
+    </a>
 </body>
 </html>
