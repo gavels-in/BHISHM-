@@ -44,6 +44,13 @@
             font-weight: bold;
             color: #000;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 32px;
+            margin-right: 10px;
         }
 
         .nav-menu {
@@ -62,6 +69,23 @@
 
         .nav-menu a:hover {
             opacity: 0.7;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            transition: all 0.3s;
         }
 
         /* Page Title */
@@ -90,6 +114,12 @@
             border-radius: 10px;
             padding: 2.5rem;
             margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-detail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
         .course-detail h2 {
@@ -204,10 +234,28 @@
                 font-size: 1.8rem;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
             .nav-menu {
-                margin-top: 1rem;
+                display: none;
                 width: 100%;
-                justify-content: center;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 1rem;
+                background-color: #FFD700;
+                padding: 1rem 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
             }
 
             .section {
@@ -238,7 +286,12 @@
     <!-- Header / Navbar -->
     <header class="header">
         <div class="nav-container">
-            <a href="index.html" class="logo">GAVELS EDUCATION</a>
+            <a href="index.html" class="logo"><img src="logo.png" alt="Gavels Education Logo">GAVELS EDUCATION</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
@@ -376,5 +429,25 @@
     <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20ke%20courses%20ke%20baare%20mein%20jaankari%20chahiye" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
         <span style="font-size: 2rem;">💬</span>
     </a>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
