@@ -1,61 +1,468 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Gavels Education</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{margin:0;font-family:Arial;background:#f4f4f4}
-    header{background:#ffcc00;padding:25px;text-align:center}
-    section{background:#fff;max-width:900px;margin:30px auto;padding:30px}
-    h1,h2{color:#222}
-    .btn{display:inline-block;background:#000;color:#fff;padding:12px 20px;text-decoration:none;border-radius:5px}
-    footer{text-align:center;color:#555;padding:15px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gavels Education - Digital Learning for Every Village. Affordable computer education, online forms training, and digital literacy for rural India. Panchayat-level education programs.">
+    <meta name="keywords" content="rural education, digital literacy, computer training, village education, panchayat education, online forms, government services, India">
+    <title>GAVELS EDUCATION - Digital Learning for Every Village</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+        }
+
+        /* Header / Navbar */
+        .header {
+            background-color: #FFD700;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: #000;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero .mission {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #000;
+            color: #FFD700;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Course Highlights */
+        .courses-preview {
+            background-color: #FFD700;
+        }
+
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .course-card h3 {
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        .course-card p {
+            margin-bottom: 1rem;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            background-color: #fff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background-color: #f0f0f0;
+            border: 2px solid #FFD700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Demo Video */
+        .video-section {
+            background-color: #FFD700;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto 0;
+            border: 3px solid #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Why Gavels / Trust Section */
+        .trust {
+            background-color: #fff;
+        }
+
+        .trust-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .trust-point {
+            text-align: center;
+            padding: 2rem;
+            background-color: #FFD700;
+            border-radius: 10px;
+        }
+
+        .trust-point h3 {
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        /* Admission CTA */
+        .admission-cta {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .admission-cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GAVELS EDUCATION</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#admission">Admission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-  <h1>GAVELS EDUCATION</h1>
-  <p>Digital Learning for Every Village</p>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>GAVELS EDUCATION</h1>
+        <p class="tagline">Digital Learning for Every Village</p>
+        <p class="mission">हमारा मिशन है कि हर गाँव में डिजिटल शिक्षा पहुँचे। कंप्यूटर की बुनियादी जानकारी से लेकर ऑनलाइन फॉर्म भरने तक, हम आपको सिखाते हैं।</p>
+        <div class="cta-buttons">
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Admission%20ke%20liye%20jaankari%20chahiye" class="btn btn-primary" target="_blank">WhatsApp पर Admission</a>
+            <!-- PLACEHOLDER: Replace with actual Google Form link -->
+            <a href="https://forms.google.com/your-form-link" class="btn btn-secondary" target="_blank">Online Admission Form</a>
+        </div>
+    </section>
 
-<section>
-  <h2>हम क्या करते हैं</h2>
-  <p>
-    गाँव और पंचायत स्तर पर Computer Education और Digital Skills सिखाते हैं।
-  </p>
+    <!-- About Section -->
+    <section class="section about">
+        <h2 class="section-title">हमारे बारे में</h2>
+        <div class="about-content">
+            <p>Gavels Education एक ऐसा शैक्षणिक संस्थान है जो ग्रामीण भारत में डिजिटल साक्षरता लाने के लिए समर्पित है। हम गाँवों और पंचायत स्तर पर काम करते हैं ताकि हर व्यक्ति को कंप्यूटर और इंटरनेट की जानकारी मिल सके।</p>
+            <br>
+            <p>हमारे पाठ्यक्रम में शामिल हैं: कंप्यूटर की बुनियादी जानकारी, ऑनलाइन फॉर्म भरना, सरकारी सेवाओं का उपयोग, और व्यावहारिक कंप्यूटर प्रशिक्षण। हमारा लक्ष्य है कि हर गाँव का व्यक्ति डिजिटल दुनिया से जुड़ सके।</p>
+        </div>
+    </section>
 
-  <h2>Courses</h2>
-  <ul>
-    <li>Computer Basics</li>
-    <li>Online Forms & Services</li>
-    <li>Digital Literacy</li>
-  </ul>
+    <!-- Course Highlights -->
+    <section class="section courses-preview">
+        <h2 class="section-title">हमारे Courses</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>कंप्यूटर बेसिक्स</h3>
+                <p>कंप्यूटर की बुनियादी जानकारी, Windows, MS Office, और इंटरनेट का उपयोग।</p>
+            </div>
+            <div class="course-card">
+                <h3>ऑनलाइन फॉर्म और सरकारी सेवाएं</h3>
+                <p>सरकारी वेबसाइटों पर फॉर्म भरना, ऑनलाइन आवेदन, और डिजिटल सेवाओं का उपयोग।</p>
+            </div>
+            <div class="course-card">
+                <h3>डिजिटल साक्षरता</h3>
+                <p>स्मार्टफोन का उपयोग, ईमेल, सोशल मीडिया, और ऑनलाइन सुरक्षा।</p>
+            </div>
+            <div class="course-card">
+                <h3>व्यावहारिक कंप्यूटर प्रशिक्षण</h3>
+                <p>हाथों-हाथ सीखना, प्रैक्टिकल क्लासेस, और रोजमर्रा के कामों के लिए कंप्यूटर का उपयोग।</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="courses.html" class="btn btn-primary">सभी Courses देखें</a>
+        </div>
+    </section>
 
-  <a class="btn" href="tel:9584934777">Call Now</a>
-</section>
+    <!-- Photo Gallery -->
+    <section class="section gallery">
+        <h2 class="section-title">हमारी गैलरी</h2>
+        <div class="gallery-grid">
+            <!-- PLACEHOLDER: Replace these divs with actual images -->
+            <!-- Example: <img src="images/gallery-1.jpg" alt="Classroom photo"> -->
+            <div class="gallery-item">Classroom Photo 1<br>(Add image here)</div>
+            <div class="gallery-item">Classroom Photo 2<br>(Add image here)</div>
+            <div class="gallery-item">Students Learning<br>(Add image here)</div>
+            <div class="gallery-item">Computer Lab<br>(Add image here)</div>
+            <div class="gallery-item">Village Session<br>(Add image here)</div>
+            <div class="gallery-item">Certificate Distribution<br>(Add image here)</div>
+        </div>
+    </section>
 
-<footer>
-  © 2026 gavels.in
-</footer>
-  <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918349988055?text=%20Hello%20" 
-   target="_blank"
-   style="
-     position:fixed;
-     bottom:20px;
-     right:20px;
-     background:#25D366;
-     color:white;
-     padding:15px 18px;
-     border-radius:50%;
-     font-size:24px;
-     text-decoration:none;
-     box-shadow:0 4px 8px rgba(0,0,0,0.3);
-     z-index:999;
-   ">
-   💬
-</a>
+    <!-- Demo Video -->
+    <section class="section video-section">
+        <h2 class="section-title">हमारा वीडियो</h2>
+        <div class="video-container">
+            <!-- PLACEHOLDER: Replace VIDEO_ID with actual YouTube video ID -->
+            <!-- Example: if video URL is https://www.youtube.com/watch?v=VIDEO_ID, use VIDEO_ID below -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Why Gavels / Trust Section -->
+    <section class="section trust">
+        <h2 class="section-title">क्यों Gavels Education?</h2>
+        <div class="trust-points">
+            <div class="trust-point">
+                <h3>सस्ती फीस</h3>
+                <p>ग्रामीण क्षेत्रों के लिए सस्ती और सुलभ फीस संरचना।</p>
+            </div>
+            <div class="trust-point">
+                <h3>गाँव-मित्र शिक्षण</h3>
+                <p>सरल भाषा में समझाना, हिंदी में निर्देश, और स्थानीय संदर्भ।</p>
+            </div>
+            <div class="trust-point">
+                <h3>व्यावहारिक सीख</h3>
+                <p>सिर्फ किताबी ज्ञान नहीं, बल्कि रोजमर्रा के कामों में उपयोगी सीख।</p>
+            </div>
+            <div class="trust-point">
+                <h3>पंचायत स्तर पर फोकस</h3>
+                <p>गाँव और पंचायत स्तर पर शिक्षा पहुँचाने का प्रयास।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission CTA -->
+    <section id="admission" class="admission-cta">
+        <h2>Admission लें - अभी शुरू करें!</h2>
+        <p style="margin-bottom: 1.5rem;">आज ही अपना डिजिटल सफर शुरू करें। WhatsApp पर संपर्क करें या ऑनलाइन फॉर्म भरें।</p>
+        <div class="cta-buttons">
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Admission%20ke%20liye%20jaankari%20chahiye" class="btn btn-primary" target="_blank">WhatsApp पर Admission</a>
+            <!-- PLACEHOLDER: Replace with actual Google Form link -->
+            <a href="https://forms.google.com/your-form-link" class="btn btn-secondary" target="_blank">Online Admission Form</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Gavels.in - Digital Learning for Every Village</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">सभी अधिकार सुरक्षित</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual WhatsApp number -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20ke%20baare%20mein%20jaankari%20chahiye" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <span style="font-size: 2rem;">💬</span>
+    </a>
 </body>
 </html>
