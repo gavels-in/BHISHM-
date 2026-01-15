@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Gavels Education - Get in touch for courses, admission, and digital literacy training in rural India.">
+    <title>Contact Us - GAVELS EDUCATION</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+        }
+
+        /* Header / Navbar */
+        .header {
+            background-color: #FFD700;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #000;
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background-color: #FFD700;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-card h2 {
+            color: #000;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info strong {
+            color: #000;
+            display: inline-block;
+            min-width: 150px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .personal-section {
+            background-color: #fff;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .personal-section h2 {
+            color: #000;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.5rem;
+        }
+
+        .personal-section p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Google Map */
+        .map-section {
+            background-color: #fff;
+            padding: 2rem 0;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .map-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-size: 1.8rem;
+        }
+
+        .map-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+        }
+
+        .map-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-menu {
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .contact-card,
+            .personal-section {
+                padding: 1.5rem;
+            }
+
+            .contact-info strong {
+                display: block;
+                margin-bottom: 0.3rem;
+            }
+
+            .map-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GAVELS EDUCATION</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#admission">Admission</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <h1>हमसे संपर्क करें</h1>
+        <p>किसी भी सवाल या Admission के लिए हमसे जुड़ें</p>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="section">
+        <div class="contact-card">
+            <h2>संपर्क जानकारी</h2>
+            <div class="contact-info">
+                <!-- PLACEHOLDER: Replace with actual center name -->
+                <p><strong>Center Name:</strong> Gavels Education Center</p>
+                
+                <!-- PLACEHOLDER: Replace with actual village/panchayat name -->
+                <p><strong>Village / Panchayat:</strong> [Your Village Name]</p>
+                
+                <!-- PLACEHOLDER: Replace with actual district and state -->
+                <p><strong>District:</strong> [Your District Name]</p>
+                <p><strong>State:</strong> [Your State Name]</p>
+                
+                <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual mobile number -->
+                <p><strong>Mobile Number:</strong> +91 XXXXXXXXXX</p>
+                
+                <!-- PLACEHOLDER: Replace with actual email if available -->
+                <p><strong>Email:</strong> info@gavels.in</p>
+            </div>
+            <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual WhatsApp number -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20ke%20baare%20mein%20jaankari%20chahiye" class="whatsapp-btn" target="_blank">WhatsApp पर संपर्क करें</a>
+        </div>
+    </section>
+
+    <!-- Personal / Trust Section -->
+    <section class="section">
+        <div class="personal-section">
+            <h2>हमारा संदेश</h2>
+            <p>नमस्ते! मैं [Founder/Trainer Name], Gavels Education के संस्थापक/प्रशिक्षक हूँ। मेरा मानना है कि डिजिटल शिक्षा हर व्यक्ति का अधिकार है, चाहे वो शहर में रहता हो या गाँव में।</p>
+            
+            <p>ग्रामीण भारत में रहने वाले लोगों को अक्सर कंप्यूटर और इंटरनेट की जानकारी नहीं मिल पाती। हमारा लक्ष्य है कि हर गाँव, हर पंचायत में डिजिटल साक्षरता पहुँचे। हम सरल भाषा में, व्यावहारिक तरीके से कंप्यूटर और डिजिटल टूल्स का उपयोग सिखाते हैं।</p>
+            
+            <p>हमारे पाठ्यक्रम सस्ते हैं, सुलभ हैं, और ग्रामीण जीवन की जरूरतों के अनुकूल हैं। चाहे आप किसी भी उम्र के हों, किसी भी पृष्ठभूमि से हों, हम आपका स्वागत करते हैं।</p>
+            
+            <p>आपका भरोसा हमारी ताकत है। हम ग्रामीण भारत में डिजिटल शिक्षा की एक नई क्रांति लाना चाहते हैं। आइए, मिलकर इस सफर में शामिल हों।</p>
+            
+            <p style="margin-top: 1.5rem; font-weight: bold;">धन्यवाद!<br>Gavels Education Team</p>
+        </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <h2>हमारा स्थान</h2>
+            <div class="map-wrapper">
+                <!-- PLACEHOLDER: Replace with actual Google Maps embed code -->
+                <!-- To get embed code: Go to Google Maps > Search your location > Share > Embed a map > Copy HTML -->
+                <!-- Example: <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE" ...></iframe> -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1234567890123!2d77.12345678901234!3d28.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA3JzI0LjQiTiA3N8KwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <!-- NOTE: Replace the above iframe src with your actual Google Maps embed URL -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Gavels.in - Digital Learning for Every Village</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">सभी अधिकार सुरक्षित</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <!-- PLACEHOLDER: Replace 91XXXXXXXXXX with actual WhatsApp number -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20Gavels%20Education%20se%20contact%20karna%20hai" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <span style="font-size: 2rem;">💬</span>
+    </a>
+</body>
+</html>
